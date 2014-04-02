@@ -44,7 +44,7 @@ $("input#count").click(function(){
 
 app.c.ziph=function(sample,n,spaces){
 	var spaces=spaces||false;
-	var n=n||7;
+	var n=n||1;
 	var lex={};
 	var sample=sample.toLowerCase();
 	if (spaces==true){
