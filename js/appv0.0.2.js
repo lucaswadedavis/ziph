@@ -9,7 +9,10 @@ var app={m:{},v:{},c:{}};
 
 /////////////////////////////////////////////////////////////////////////////////
 
-
+app.m.colors={};
+app.m.colors.primary="#f37";
+app.m.colors.secondary="#f67";
+app.m.colors.grey="#555";
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -81,7 +84,7 @@ app.c.ziph=function(sample,n,spaces){
 app.v.init=function(){
 	app.v.style();
 	var d="";
-	d+="<table width='100%' id='layout'><tr><td colspan='5' id='area-right'>";
+	d+="<table width='100%' id='layout'><tr><td colspan='3' id='area-right'>";
 		d+="<h1>ziph</h1>";
 		d+="<input type='radio' value='1' name='count' checked><label>count by singletons</label></br>";
 		d+="<input type='radio' value='2' name='count'><label>count by doubles</label><br/>";
@@ -99,10 +102,9 @@ app.v.style=function(){
 		"width":"100%",
 		"margin":"0px",
 		"padding":"0px",
-		"text-align":"center",
-		"background":"#555",
-		"color":"#fff",
-		"font-size":"3em"
+		"color":"#555",
+		"font-size":"3em",
+		"font-family":"sans-serif"
 	});
 	davis.style("div",{
 		"padding":"0",
@@ -110,15 +112,22 @@ app.v.style=function(){
 		"margin":"30px"
 	});
 	davis.style("h1",{
-		"text-align":"left"
+		"text-align":"left",
+		"color":app.m.colors.primary
 	});
 	davis.style("input[type=button]",{
 		"width":"100%",
-		"font-size":"2em"
+		"font-size":"2em",
+		"background":app.m.colors.primary,
+		"border":"2px solid "+app.m.colors.grey,
+		"cursor":"pointer",
+		"color":"#fff"
 	});
 	davis.style("textarea",{
 		"width":"100%",
 		"font-size":"1.5em",
+		"font-family":"arial sans-serif",
+		"border":"2px solid "+app.m.colors.grey,
 		"margin":"0",
 		"margin-top":"30px"
 	});
@@ -130,22 +139,23 @@ app.v.style=function(){
 		"table-layout":"fixed"
 	});
 	davis.style("td",{
-		"padding":"20px",
-		"margin":"30px",
+		"padding":"30px",
+		"margin":"0px",
 		"vertical-align":"top",
 		"text-align":"left"
 	});
 	davis.style("td#output",{
-		"background":"#f37",
+		"background":app.m.colors.primary,
 		"text-align":"left",
 		"padding":"0"
 	});
 	davis.style("td#output td",{
+		"color":"#fff",
 		"padding":"3px",
 		"margin":"0",
 	});
 	davis.style("tr.odd td",{
-		"background":"#f67"
+		"background":app.m.colors.secondary
 	});
 	davis.style("td#output td:hover",{
 		"background":"#555"
