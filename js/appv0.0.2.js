@@ -113,6 +113,8 @@ app.v.style=function(){
 	});
 	davis.style("h1",{
 		"text-align":"left",
+		"font-size":"7em",
+		"margin-bottom":"30px",
 		"color":app.m.colors.primary
 	});
 	davis.style("input[type=button]",{
