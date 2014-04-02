@@ -89,6 +89,7 @@ app.v.init=function(){
 		d+="<input type='radio' value='1' name='count' checked><label>count by singletons</label></br>";
 		d+="<input type='radio' value='2' name='count'><label>count by doubles</label><br/>";
 		d+="<input type='radio' value='3' name='count'><label>count by triples</label><br>";
+		d+="<input type='radio' value='4' name='count'><label>count by quadruples</label><br>";
 		d+="<textarea rows='10' cols='5' id='input' autofocus></textarea>";
 		d+="<input type='button' value='count' id='count'></input>";
 	d+="</td><td id='output'>";
@@ -127,7 +128,7 @@ app.v.style=function(){
 	});
 	davis.style("textarea",{
 		"width":"100%",
-		"font-size":"1.5em",
+		"font-size":"0.8em",
 		"font-family":"arial sans-serif",
 		"border":"2px solid "+app.m.colors.grey,
 		"margin":"0",
