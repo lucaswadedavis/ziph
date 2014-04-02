@@ -4,7 +4,7 @@
 - and political essays (quick way to tag articles)
 - and jQuery (though it could be done with any codebase you like, to figure out the common patterns for building transpilation targets).
 
-The important method is app.c.ziph in the app.js file, which takes three arguments:
+The important method is app.c.ziph in the app.js file (also [here](https://gist.github.com/lucaswadedavis/9927980#file-ziph-js) as a gist), which takes three arguments:
 
 - (a string) the sample to be deconstructed and counted
 - (an int, default 1) the chunk size 
