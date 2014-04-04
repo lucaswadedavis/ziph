@@ -25,7 +25,14 @@ app.c.listeners=function(){
 $("input#count").click(function(){
 	var input=$("#input").val();
 	var count=$("input[name=count]:checked").val();
-	input=app.c.ziph(input,parseInt(count),true);
+	var division=$("input[name=division]:checked").val();
+	if (parseInt(division)==1){
+		division=true;
+	}else{
+		division=false;
+	}
+	console.log(division);
+	input=app.c.ziph(input,parseInt(count),division);
 	var sortable=[];
 	for (key in input){sortable.push([key,input[key].count]);}
 	sortable.sort(function(a,b){return b[1]-a[1];});
@@ -86,10 +93,14 @@ app.v.init=function(){
 	var d="";
 	d+="<table width='100%' id='layout'><tr><td colspan='3' id='area-right'>";
 		d+="<h1>ziph</h1>";
+		d+="<hr>";
 		d+="<input type='radio' value='1' name='count' checked><label>count by singletons</label></br>";
 		d+="<input type='radio' value='2' name='count'><label>count by doubles</label><br/>";
 		d+="<input type='radio' value='3' name='count'><label>count by triples</label><br>";
 		d+="<input type='radio' value='4' name='count'><label>count by quadruples</label><br>";
+		d+="<hr>";
+		d+="<input type='radio' value='1' name='division' checked><label>count by words</label></br>";
+		d+="<input type='radio' value='0' name='division'><label>count by characters</label><br/>";
 		d+="<textarea rows='10' cols='5' id='input' autofocus></textarea>";
 		d+="<input type='button' value='count' id='count'></input>";
 	d+="</td><td id='output'>";
