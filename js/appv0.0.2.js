@@ -38,6 +38,7 @@ $("input#count").click(function(){
 	sortable.sort(function(a,b){return b[1]-a[1];});
 	var d="";
 	d+="<table>";
+	d+="<tr><td colspan='2'>sample length: "+app.m.sampleLength+"</td></tr>";
 	for (var i=0;i<sortable.length;i++){
 		var rowClass="odd";
 		if (i%2==0){rowClass="even";}
@@ -60,6 +61,8 @@ app.c.ziph=function(sample,n,spaces){
 	else{
 		sample=sample.split("");
 	}
+
+	app.m.sampleLength=sample.length;
 
 	for (var i=0;i<=(sample.length-n);i++){
 		//then populate the lexicon
