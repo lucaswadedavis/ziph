@@ -42,7 +42,7 @@ $("input#count").click(function(){
 	for (var i=0;i<sortable.length;i++){
 		var rowClass="odd";
 		if (i%2==0){rowClass="even";}
-		d+="<tr class='"+rowClass+"'><td>"+sortable[i][1]+"</td><td>"+sortable[i][0]+"</td></tr>";
+		d+="<tr class='"+rowClass+"'><td>"+sortable[i][1]+"</td><td>"+sortable[i][0].replace(/</gi,"&lt;")+"</td></tr>";
 	}
 	d+="</table>";
 	$("#output").html(d);
